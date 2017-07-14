@@ -1,7 +1,6 @@
 package sampleapplication;
 
 import java.io.File;
-import java.io.IOException;
 
 public class Configuration {
 
@@ -17,12 +16,7 @@ public class Configuration {
         File configFile = new File(configPath);
 
         if (!configFile.exists()) {
-            try {
-                configFile.mkdirs();
-                configFile.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            System.out.println("No configuration file found.");
         }
 
     }
